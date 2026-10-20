@@ -531,7 +531,7 @@ window.LNF = window.LNF || {};
         </main>
 
         {/* Floating "+ Log Item" Action Button (Mobile Thumb Zone) */}
-        <div className="fixed bottom-6 right-5 z-20" style={{ bottom: 'calc(1.5rem + env(safe-area-inset-bottom))' }}>
+        <div className="fixed z-20" style={{ bottom: 'calc(1.25rem + env(safe-area-inset-bottom))', right: 'calc(1rem + env(safe-area-inset-right))' }}>
           <button
             onClick={() => setIsLogItemOpen(true)}
             className="flex items-center gap-2 bg-[#0047BA] hover:bg-[#00368C] text-white px-5 py-3.5 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-150 border border-white/20 text-base font-semibold min-h-[50px] min-w-[50px]"
