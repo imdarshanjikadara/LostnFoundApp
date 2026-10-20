@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Tivoli ID Station — Lost & Found (Auraria Campus)</title>
+  
+  <!-- Apple Mobile Web App & PWA Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Tivoli Lost & Found" />
+  <meta name="theme-color" content="#0047BA" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="./auraria-logo-white-062824.svg" />
+  <link rel="apple-touch-icon" href="./icon-192.svg" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            auraria: {
+              blue: '#0047BA',
+              blueDark: '#00368C',
+              blueLight: '#1A62E8',
+              lime: '#C2EC00',
+              limeDark: '#A5C900',
+            },
+            apple: {
+              blue: '#007AFF',
+              green: '#34C759',
+              indigo: '#5856D6',
+              orange: '#FF9500',
+              pink: '#FF2D55',
+              purple: '#AF52DE',
+              red: '#FF3B30',
+              teal: '#5AC8FA',
+              bgLight: '#F2F2F7',
+              gray1: '#8E8E93',
+              gray5: '#E5E5EA',
+              gray6: '#F2F2F7',
+            }
+          },
+          fontFamily: {
+            sans: [
+              '-apple-system',
+              'BlinkMacSystemFont',
+              '"SF Pro Display"',
+              '"SF Pro Text"',
+              '"Segoe UI"',
+              'Roboto',
+              'Helvetica',
+              'Arial',
+              'sans-serif'
+            ],
+          },
+          boxShadow: {
+            'apple-sm': '0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02)',
+            'apple-card': '0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02)',
+            'apple-sheet': '0 -10px 40px rgba(0, 0, 0, 0.14)',
+            'apple-button': '0 1px 2px rgba(0, 0, 0, 0.05)',
+            'apple-green': '0 1px 2px rgba(0, 0, 0, 0.05)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- React 18, ReactDOM 18, Supabase JS & Babel Standalone for JSX parsing -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body class="min-h-screen bg-[#F2F2F7] antialiased overflow-x-hidden selection:bg-[#0047BA] selection:text-white">
+  <!-- React Mount Root -->
+  <div id="root"></div>
+
+  <!-- Modular Scripts Architecture -->
+  <!-- 1. Security & Core Utilities -->
+  <script src="./js/config.js"></script>
+  <script type="text/babel" src="./js/utils/security.js"></script>
+  <script type="text/babel" src="./js/utils/supabaseClient.js"></script>
+  <script type="text/babel" src="./js/utils/imageOptimizer.js"></script>
+  <script type="text/babel" src="./js/utils/formatters.js"></script>
+  <script type="text/babel" src="./js/utils/exportCsv.js"></script>
+
+  <!-- 2. Data Models & Seed Data -->
+  <script type="text/babel" src="./js/data/categories.js"></script>
+  <script type="text/babel" src="./js/data/initialItems.js"></script>
+  <script type="text/babel" src="./js/data/initialUsers.js"></script>
+
+  <!-- 3. Component Modules & Vector Icons -->
+  <script type="text/babel" src="./js/components/Icons.js"></script>
+  <script type="text/babel" src="./js/components/StaffSignInModal.js"></script>
+  <script type="text/babel" src="./js/components/UserManagementModal.js"></script>
+  <script type="text/babel" src="./js/components/Header.js"></script>
+  <script type="text/babel" src="./js/components/ItemCard.js"></script>
+  <script type="text/babel" src="./js/components/ItemDetailSheet.js"></script>
+  <script type="text/babel" src="./js/components/ItemFormSheet.js"></script>
+  <script type="text/babel" src="./js/components/MarkClaimedModal.js"></script>
+
+  <!-- 4. Main Application Entry Point -->
+  <script type="text/babel" src="./js/app.js"></script>
+</body>
+</html>

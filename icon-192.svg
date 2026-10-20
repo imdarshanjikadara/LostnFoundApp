@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="192" height="192">
+  <defs>
+    <linearGradient id="appleBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A84FF" />
+      <stop offset="100%" stop-color="#0062D2" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="115" fill="url(#appleBlue)" />
+  <g filter="url(#shadow)" transform="translate(106, 106)">
+    <rect x="0" y="30" width="300" height="220" rx="24" fill="#FFFFFF" fill-opacity="0.95" />
+    <rect x="24" y="54" width="80" height="90" rx="12" fill="#E5E5EA" />
+    <circle cx="64" cy="85" r="22" fill="#8E8E93" />
+    <path d="M 36 130 C 36 112 50 102 64 102 C 78 102 92 112 92 130 Z" fill="#8E8E93" />
+    <rect x="120" y="66" width="140" height="14" rx="7" fill="#1C1C1E" />
+    <rect x="120" y="92" width="110" height="10" rx="5" fill="#8E8E93" />
+    <rect x="120" y="112" width="130" height="10" rx="5" fill="#C7C7CC" />
+    <rect x="24" y="174" width="252" height="48" rx="10" fill="#F2F2F7" />
+    <circle cx="50" cy="198" r="10" fill="#34C759" />
+    <rect x="74" y="193" width="90" height="10" rx="5" fill="#3A3A3C" />
+    <circle cx="210" cy="210" r="50" fill="#007AFF" fill-opacity="0.92" stroke="#FFFFFF" stroke-width="8" />
+    <circle cx="210" cy="210" r="26" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+    <line x1="228" y1="228" x2="256" y2="256" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" />
+  </g>
+</svg>

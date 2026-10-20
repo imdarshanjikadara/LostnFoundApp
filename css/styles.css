@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Tivoli ID Station — Lost & Found Design System
+   Auraria Campus Brand & Apple Cupertino Human Interface Guidelines
+   ========================================================================== */
+
+:root {
+  /* Auraria Campus Official Colors */
+  --auraria-blue: #0047BA;
+  --auraria-blue-dark: #00368C;
+  --auraria-blue-light: #1A62E8;
+  --auraria-lime: #C2EC00;
+  --auraria-lime-dark: #A5C900;
+  
+  /* Apple System Colors */
+  --apple-system-blue: #007AFF;
+  --apple-system-green: #34C759;
+  --apple-system-indigo: #5856D6;
+  --apple-system-orange: #FF9500;
+  --apple-system-pink: #FF2D55;
+  --apple-system-purple: #AF52DE;
+  --apple-system-red: #FF3B30;
+  --apple-system-teal: #5AC8FA;
+  
+  /* Safe Area Insets */
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+body {
+  background-color: #F2F2F7;
+  color: #1C1C1E;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overscroll-behavior-y: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enforce >=16px font size on inputs to prevent iOS Safari auto-zoom */
+input, select, textarea, button {
+  font-size: 16px !important;
+  user-select: auto;
+  -webkit-user-select: auto;
+}
+
+/* Custom Apple Smooth Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* Keyframe Spring & Shake Animations */
+@keyframes springSheetUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0.8;
+  }
+  70% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-sheet-up {
+  animation: springSheetUp 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Translucent Cupertino Frosted Glass */
+.cupertino-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+}
+
+.cupertino-pill-active {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 0.5px 2px rgba(0, 0, 0, 0.08);
+}
+
+/* Auraria Brand Accents */
+.auraria-gradient {
+  background: linear-gradient(135deg, #00368C 0%, #0047BA 60%, #1A62E8 100%);
+}
+
+.auraria-lime-pill {
+  background-color: var(--auraria-lime);
+  color: #111827;
+}
+
+/* Apple Cupertino UI/UX Button Polish */
+button {
+  transition: transform 0.12s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle Apple highlight on hover without glow/blur */
+.apple-btn-hover:hover {
+  filter: brightness(1.05);
+}
+
+.apple-btn-hover:active {
+  filter: brightness(0.95);
+  transform: scale(0.98);
+}
+
